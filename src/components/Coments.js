@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Comment, Form, Header } from 'semantic-ui-react';
+import { Comment, Header } from 'semantic-ui-react';
 
 const Comments = () => (
   <Comment.Group>
@@ -51,16 +51,6 @@ const Comments = () => (
         </Comment>
       </Comment.Group>
     </Comment>
-
-    <Form reply>
-      <Form.TextArea />
-      <Button
-        content="Agregar Comentario"
-        labelPosition="left"
-        icon="edit"
-        primary
-      />
-    </Form>
   </Comment.Group>
 );
 

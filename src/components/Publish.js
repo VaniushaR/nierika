@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { db } from './Credentials';
 import { currenUser, picCurrenUser } from './Login';
 import { Feed, Icon } from 'semantic-ui-react';
-import Coments from './Coments';
 
 const posting = textPosted => {
   //const userPost = document.getElementById('userPost');
@@ -44,11 +43,11 @@ class Publish extends Component {
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          console.log(
-            `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${
-              doc.data().user
-            } => ${doc.data().userPic}`
-          );
+          //console.log(
+          // `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${
+          //  doc.data().user
+          // } => ${doc.data().userPic}`
+          //); consoleando la data
         });
       });
   }
@@ -89,7 +88,6 @@ class Publish extends Component {
               </Feed.Event>
             </Feed>
             <div className="card-footer text-muted"> </div>
-            <Coments />
           </div>
         </section>
       </div>
@@ -117,4 +115,5 @@ class Publish extends Component {
   }
 }
 */
+
 export default Publish;

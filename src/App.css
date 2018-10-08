@@ -99,11 +99,11 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .welcome {
-  padding: 10%;
+  padding: 5%;
   font-size: 1.5em;
 }
 .login {
-  padding: 15%;
+  padding: 5%;
 }
 
 .timeLine {
