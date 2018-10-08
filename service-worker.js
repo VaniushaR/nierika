@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/nierika/precache-manifest.54a52807b3f7876abfc09addb13f2320.js"
+  "/nierika/precache-manifest.f8aa2cfa146d0b283ed6ab15d5aeef22.js"
 );
 
 workbox.clientsClaim();

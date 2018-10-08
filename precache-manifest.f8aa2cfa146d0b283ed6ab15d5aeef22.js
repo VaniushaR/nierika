@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "7fc58977f8c4f30cafe9",
-    "url": "/nierika/static/css/main.3a86478e.chunk.css"
+    "revision": "8d44b142a9d2764dfc9a",
+    "url": "/nierika/static/css/main.00d40188.chunk.css"
   },
   {
     "revision": "cdbce77d96b5fe3ce2dc084764b4d5e9",
     "url": "/nierika/static/media/fb.cdbce77d.png"
   },
   {
-    "revision": "34128f8e04e21b3b04c4",
-    "url": "/nierika/static/js/1.34128f8e.chunk.js"
+    "revision": "7691aad1ce506db4eba8",
+    "url": "/nierika/static/js/1.7691aad1.chunk.js"
   },
   {
     "revision": "cf662021d6520eecafe0",
@@ -40,16 +40,16 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/nierika/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/nierika/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "7fc58977f8c4f30cafe9",
-    "url": "/nierika/static/js/main.7fc58977.chunk.js"
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/nierika/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
+    "revision": "8d44b142a9d2764dfc9a",
+    "url": "/nierika/static/js/main.8d44b142.chunk.js"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/nierika/static/media/brand-icons.c5ebe0b3.ttf"
-  },
-  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/nierika/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/nierika/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -92,11 +92,11 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "34128f8e04e21b3b04c4",
+    "revision": "7691aad1ce506db4eba8",
     "url": "/nierika/static/css/1.c5682873.chunk.css"
   },
   {
-    "revision": "b49beb63b6fb724d0661ac75fba7bbf1",
+    "revision": "98d03ff68e5f768e4ba0c26e13f7bcd7",
     "url": "/nierika/index.html"
   }
 ];
