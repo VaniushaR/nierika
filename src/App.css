@@ -1,25 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 80px;
+  background-position: bottom;
+  border-radius: 50%;
+  padding: 0%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(244, 102, 100);
+  background-position: bottom;
+  background-size: cover;
+  height: 180px;
+  padding: 9px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title {
+  font-size: 3em;
+  font-family: 'Berkshire Swash', cursive;
+  padding: 0%;
+}
+
+.App-intro {
+  font-size: 1.5em;
+}
+
+.App-footer {
+  background-color: rgb(244, 102, 100);
+  align-content: center;
+  background-size: cover;
+  height: 50px;
+  padding: 12px;
+  color: white;
+}
+.profile {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.facebook {
+  background-image: url(./assets/fb.png);
+  background-size: 250px, 105px;
+  width: 250px;
+  height: 41px;
+  border-radius: 6px;
+  border: none;
+}
+
+.google {
+  width: 250px;
+  height: 41px;
+  font-size: 0.8em;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.welcome {
+  padding: 5%;
+  font-size: 1.5em;
+}
+.login {
+  padding: 5%;
+}
+
+.timeLine {
+  padding: 5%;
+  background-color: rgba(247, 244, 248, 0.349);
 }
 
 @keyframes App-logo-spin {
@@ -29,4 +118,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.intro {
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Berkshire Swash', cursive;
 }
