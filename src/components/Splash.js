@@ -1,8 +1,6 @@
 //Splash view components
 import React, { Component } from 'react';
 import Brand from '../assets/logoWolf.gif';
-import '../splash.css';
-import '../index.css';
 
 class Splash extends Component {
   render() {
