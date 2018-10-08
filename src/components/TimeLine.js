@@ -13,56 +13,45 @@ class TimeLine extends Component {
     super();
 
     this.state = {
-      post: []
+      posts: []
     };
   }
 
   componentDidMount() {
     db.collection('timeLine')
       .get()
-      .then(
-        querySnapshot => {
-          this.setState({
-            posts: querySnapshot.forEach(doc => {
-              console.log(
-                'enviando data',
-                doc.data().user,
-                doc.data().date,
-                doc.data().textPosted,
-                doc.data().userPic
-              );
-              return (
-                (user = doc.data().user),
-                (date = doc.data().date),
-                (textPosted = doc.data().textPosted),
-                (postImg = doc.data().userPic),
-                (totalPost = +1)
-              );
-            })
-          });
-        },
-        //querySnapshot.forEach(doc => {
-        //console.log(
-        // `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${
-        //  doc.data().user
-        // } => ${doc.data().userPic}`
-
-        // snapShots => {
-        //   this.setState({
-        //     items: snapShots.docs.map(doc => {
-        //      console.log(snapShots.docs);
-        //     return { id: doc.id, data: doc.data() };
-        //   })
-        //  });
-        // },
-        error => {
-          console.log(error);
-        }
-      );
+      .then(querySnapshot => {
+        const posts = [];
+        querySnapshot.forEach(doc => {
+          const dataPost = doc.data();
+          posts.push(dataPost);
+          console.log('enviando data', posts);
+        });
+        this.setState({ posts: posts });
+      });
+    //console.log('estado:', this.state.posts);
   }
+  //querySnapshot.forEach(doc => {
+  //console.log(
+  // `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${
+  //  doc.data().user
+  // } => ${doc.data().userPic}`
+
+  // snapShots => {
+  //   this.setState({
+  //     items: snapShots.docs.map(doc => {
+  //      console.log(snapShots.docs);
+  //     return { id: doc.id, data: doc.data() };
+  //   })
+  //  });
+  // },
 
   render() {
-    return <DrawTimeLine />;
+    return (
+      <div>
+        <DrawTimeLine post={this.state.posts} />
+      </div>
+    );
   }
 
   //const { post } = this.state;
@@ -70,4 +59,11 @@ class TimeLine extends Component {
 }
 
 export default TimeLine;
-export { user, date, textPosted, postImg, totalPost };
+//export { user, date, textPosted, postImg, totalPost };
+
+/*
+oc.data().user,
+                doc.data().date,
+                doc.data().textPosted,
+                doc.data().userPic, 
+                */
