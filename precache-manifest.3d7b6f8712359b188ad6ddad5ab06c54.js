@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "8d44b142a9d2764dfc9a",
-    "url": "/nierika/static/css/main.00d40188.chunk.css"
+    "revision": "f25b99bf465b91faed04",
+    "url": "/nierika/static/css/main.0db89067.chunk.css"
   },
   {
     "revision": "cdbce77d96b5fe3ce2dc084764b4d5e9",
     "url": "/nierika/static/media/fb.cdbce77d.png"
   },
   {
-    "revision": "7691aad1ce506db4eba8",
-    "url": "/nierika/static/js/1.7691aad1.chunk.js"
+    "revision": "8ae2200edde9e5c9828b",
+    "url": "/nierika/static/js/1.8ae2200e.chunk.js"
   },
   {
     "revision": "cf662021d6520eecafe0",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "8d44b142a9d2764dfc9a",
-    "url": "/nierika/static/js/main.8d44b142.chunk.js"
+    "revision": "f25b99bf465b91faed04",
+    "url": "/nierika/static/js/main.f25b99bf.chunk.js"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/nierika/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/nierika/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/nierika/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -92,11 +92,11 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "7691aad1ce506db4eba8",
+    "revision": "8ae2200edde9e5c9828b",
     "url": "/nierika/static/css/1.c5682873.chunk.css"
   },
   {
-    "revision": "98d03ff68e5f768e4ba0c26e13f7bcd7",
+    "revision": "92048a506d7adb540ed287d5f198c7db",
     "url": "/nierika/index.html"
   }
 ];
