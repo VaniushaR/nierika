@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-//import TimeLine from './TimeLine';
-import { Feed, Icon, Button, Comment, Form, Item } from 'semantic-ui-react';
+import {
+  Feed,
+  Icon,
+  Button,
+  Comment,
+  Form,
+  Flag,
+  Segment
+} from 'semantic-ui-react';
 import Coments from './Coments';
 import { currenUser, picCurrenUser } from './Login';
 
@@ -15,22 +22,26 @@ class DrawTimeLine extends Component {
               <div className="card text-center">
                 <div className="card-body">
                   <h5 className="card-title">{item.user} </h5>
-                  <img className="profile" src={item.userPic} />
-                  <p>Post # </p>
-                  <p>{item.textPosted}</p>
-                  <Comment.Group>
-                    <Form reply>
-                      <Form.TextArea />{' '}
-                      <Button
-                        content="Editar"
-                        labelPosition="left"
-                        icon="edit"
-                        primary
-                      />
-                    </Form>
-                  </Comment.Group>
+                  <img className="profile" alt={item.user} src={item.userPic} />
+                  <Segment>
+                    <Flag name="Mexico" />
+                    <p>{item.textPosted}</p>
+                  </Segment>
 
-                  <button>eliminar</button>
+                  <Form reply>
+                    <Button
+                      content="Editar"
+                      labelPosition="left"
+                      icon="edit"
+                      primary
+                    />
+                    <Button
+                      content="Eliminar"
+                      color="red"
+                      labelPosition="left"
+                      icon="trash alternate"
+                    />
+                  </Form>
 
                   <p className="card-text"> </p>
                   <a className="btn btn-Success" />
