@@ -2,6 +2,7 @@
 
 ## Red Social para aprender y enseñar una lengua originaria
 
+![Nierika Login Screen](./src/assets/Documentation/Nierika-login.png)
 Para las culturas originarias o indígenas, los colores forman una parte esencial de su comunicación simbólica. La _nierika_ es uno de los conceptos más complejos y difíciles de traducir al español, ya que no contamos con las palabras suficientemente acertadas para poder definir con claridad lo que representa para su cultura, una de las formas más acercadas, según Maria Jose Castañedaen [Nierika o el espejo transgeneracional de los wixarikas _huicholes_](https://masdemx.com/2015/12/nierika-o-el-espejo-transgeneracional-de-los-wirrarikas-huicholes/) nierika, entre otras definiciones simbólicas, un espejo en el que el pasado y el presente colindan, para los wixarikas, (_huicholes_) por lo que su deifinición inspira el nombre de esta aplicación web, que pretende, mediante un método moderno, como lo es la tecnología web, recuperar y preservar el pasado y presente lingüístico de nuestros pueblos originarios.
 ![Nierika Wixarika _Peyote Ceremony in the Sacred Land of Wirikuta_ Maximino Renteria de la Cruz, Nayarit, Mexico, 2006, Yarn pressed into beeswax on plywood 48" x 48"](./src/assets/nierika.jpg) [Image from **Indigo Arts**](https://indigoarts.com/galleries/nierika-yarn-paintings-huichol-indians-mexico)
 

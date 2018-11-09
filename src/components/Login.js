@@ -23,7 +23,7 @@ class Login extends Component {
   }
   componentWillMount() {
     firebase.auth().onAuthStateChanged(user => {
-      this.setState({ user }); //se resume user¨= user
+      this.setState({ user }); //user : user
     });
     firebase
       .database()
