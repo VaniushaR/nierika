@@ -28,13 +28,15 @@ class App extends Component {
       return <Splash />;
     }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="Nierika Huirrarica" />
-          <h1 className="App-title">Nierika</h1>
-        </header>
-        <Login />
-        <Footer />
+      <div className="main">
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="Nierika Huirrarica" />
+            <h1 className="App-title">Nierika</h1>
+          </header>
+          <Login />
+          <Footer />
+        </div>
       </div>
     );
   }
