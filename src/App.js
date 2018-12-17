@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Splash from './components/Splash';
 //import firebase from 'firebase';
-console.log('holi desde app');
 
 class App extends Component {
   constructor(props) {
