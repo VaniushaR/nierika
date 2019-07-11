@@ -19,6 +19,23 @@ class TimeLine extends Component {
 
   componentDidMount() {
     db.collection('timeLine')
+      .orderBy('date', 'desc')
+      .onSnapshot(querySnapshot => {
+        const posts = [];
+        querySnapshot.forEach(doc => {
+          const dataPost = doc.data();
+          posts.push(dataPost);
+          console.log('enviando data', posts);
+        });
+        this.setState({ posts: posts });
+      });
+    //console.log('estado:', this.state.posts);
+  }
+
+  /* working:
+   componentDidMount() {
+    db.collection('timeLine')
+      .orderBy('date', 'desc')
       .get()
       .then(querySnapshot => {
         const posts = [];
@@ -31,6 +48,8 @@ class TimeLine extends Component {
       });
     //console.log('estado:', this.state.posts);
   }
+  */
+
   //querySnapshot.forEach(doc => {
   //console.log(
   // `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${

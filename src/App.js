@@ -18,16 +18,18 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //setTimeOut for the wolf splash
     if (!this.state.splashEnded) {
       setTimeout(() => this.setState({ splashEnded: true }), 2000);
     }
   }
   render() {
-    //conditional rendering:
+    //conditional rendering for Splash:
     if (!this.state.splashEnded) {
       return <Splash />;
     }
     return (
+      //else bind the Login view and components
       <div className="main">
         <div className="App">
           <header className="App-header">

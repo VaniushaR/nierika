@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="App-footer">
         <p>
-          Powered by: <em> Laboratoria.</em> CDMX 2018
+          <em>Vania Ramírez &nbsp; </em> &nbsp; CDMX &nbsp; 2019.
         </p>
       </footer>
     );

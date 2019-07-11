@@ -25,7 +25,7 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ user }); //user : user
     });
-    firebase
+    firebase //para qué hago esto??
       .database()
       .ref('pictures')
       .on('child_added', snapshot => {
@@ -34,6 +34,7 @@ class Login extends Component {
         });
       });
   }
+
   LoginGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase
