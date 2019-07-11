@@ -120,3 +120,14 @@ body {
   color: whitesmoke;
   font-family: 'Berkshire Swash', cursive;
 }
+.box-form {
+  padding: 3%;
+}
+
+.ui.grid {
+  margin-left: 1em;
+}
+
+.input-form {
+  width: 50em;
+}
