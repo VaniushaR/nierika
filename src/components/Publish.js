@@ -3,6 +3,7 @@ import { db } from './Credentials';
 import { currenUser, picCurrenUser } from './Login';
 import LanguagesOptions from './Languages';
 import LocationOptions from './Locations';
+import TextTypes from './TextTypes';
 import {
   Feed,
   Icon,
@@ -14,8 +15,11 @@ import {
   Label,
   Select,
   Input,
-  Header
+  Header,
+  List
 } from 'semantic-ui-react';
+
+const sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive'];
 
 const posting = textPosted => {
   const postDate = new Date();
@@ -67,7 +71,7 @@ class Publish extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="newPost">
         <section className="timeLine">
           <Segment raised>
             <Grid columns="equal">
@@ -86,10 +90,10 @@ class Publish extends Component {
               <Grid.Row>
                 <Grid.Column>
                   <Segment>
-                    <h5>
-                      Comparte con la comunidad una frase o texto en una lengua
-                      originaria
-                    </h5>
+                    <h4>
+                      ¡Comparte con la comunidad una frase o texto en una lengua
+                      originaria! 😄
+                    </h4>
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
@@ -99,7 +103,6 @@ class Publish extends Component {
                     <Label attached="top">
                       Selecciona la Lengua Originaria
                     </Label>
-
                     <LanguagesOptions />
                   </Segment>
                 </Grid.Column>
@@ -110,7 +113,6 @@ class Publish extends Component {
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
-
               <Grid.Row>
                 <Grid.Column>
                   <Segment padded>
@@ -140,59 +142,50 @@ class Publish extends Component {
               <Grid.Row>
                 <Grid.Column>
                   <Segment padded>
-                    <Label attached="top right">Agrega una imagen</Label>
-                    <Button color="teal">Buscar en mis archivos</Button>
+                    <Label attached="top right">
+                      Si quieres agrega una imagen
+                    </Label>
+                    <Button color="teal">Buscar en mis archivos</Button> &nbsp;
                     <Button color="orange">Acceder a la cámara</Button>
                   </Segment>
                 </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
                 <Grid.Column>
                   <Segment>
                     <Label attached="top right">
                       Selecciona el tipo de contenido
                     </Label>
-                    <Checkbox label="Poesía" />
-                    <Checkbox label="Narración verídica" />
-                    <Checkbox label="Noticia" />
-                    <Checkbox label="Frase o Refrán" />
-                    <Checkbox label="Cuento" />
-                    <Checkbox label="Mito o Leyenda" />
-                    <Checkbox label="Gramática" />
-                    <Checkbox label="Vocabulario" />
+                    <TextTypes />
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
+              <Grid.Row />
+              <Grid.Row>
+                <Grid.Column>
+                  <Segment.Group horizontal>
+                    <Segment>
+                      <Checkbox toggle />
+                    </Segment>
+                    <Segment>
+                      <h4>
+                        Permitir que mi publicación y mis datos de hablante sean
+                        utilizados para investigación y fomento al conocimiento
+                        de las Lenguas Originarias
+                      </h4>
+                    </Segment>
+                    <Segment>
+                      <Button
+                        onClick={this.handleClick.bind(this)}
+                        color="green"
+                      >
+                        Publicar{' '}
+                      </Button>
+                    </Segment>
+                  </Segment.Group>
+                </Grid.Column>
+              </Grid.Row>
             </Grid>
-
-            <Divider section />
-
-            <Segment compact>
-              <Checkbox toggle />
-              <label>
-                Permitir que mi publicación y mis datos de hablante sean
-                utilizados para investigación y fomento al conocimiento de las
-                Lenguas Originarias
-              </label>
-
-              <Button onClick={this.handleClick.bind(this)} color="green">
-                Publicar{' '}
-              </Button>
-            </Segment>
           </Segment>
 
-          <Feed>
-            <Feed.Event>
-              <Feed.Content>
-                <Feed.Meta>
-                  <Feed.Like>
-                    <Icon name="like" />4 Likes
-                  </Feed.Like>
-                  <input placeholder="¿A qué lengua pertenece?" id="Language" />
-                </Feed.Meta>
-              </Feed.Content>
-            </Feed.Event>
-          </Feed>
           <div className="card-footer text-muted"> </div>
         </section>
       </div>
