@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 //import { Post } from './Post';
 import Navbar from './Navbar';
-import Publish from './Publish';
+import NewPublication from './NewPublication';
 import { db } from './Credentials';
 import TimeLine from './TimeLine';
 
@@ -118,7 +118,7 @@ class Login extends Component {
             </div>
           </nav>
           <Navbar />
-          <Publish />
+          <NewPublication />
           <TimeLine />
         </div>
       );
