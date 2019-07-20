@@ -11,9 +11,11 @@ import {
   Image,
   Label,
   Rating,
-  GridColumn
+  GridColumn,
+  Accordion,
+  Header
 } from 'semantic-ui-react';
-import Coments from './Coments';
+import Comments from './Comments';
 import { currenUser, picCurrenUser } from './Login';
 
 class DrawTimeLine extends Component {
@@ -24,9 +26,19 @@ class DrawTimeLine extends Component {
   //         let toDat = toDate(timeSta)
   //         console.log(toDat));
   // );
+  state = { activeIndex: 0 };
+
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  };
 
   render() {
     console.log(this.props.post);
+    const { activeIndex } = this.state; //ACCORDION
 
     return (
       <div>
@@ -57,9 +69,17 @@ class DrawTimeLine extends Component {
                         </Label>
                         <Button color="red">
                           <Icon name="heart" />
-                          Like
                         </Button>
                       </Button>
+                      <div className="publisher-btns">
+                        <Button circular color="green" icon="edit" />
+                        <Button
+                          circular
+                          inverted
+                          color="grey"
+                          icon="trash alternate"
+                        />
+                      </div>
                     </Grid.Column>
                   </Grid.Row>
                   <Grid.Row>
@@ -111,7 +131,39 @@ class DrawTimeLine extends Component {
                   </Grid.Row>
 
                   <Grid.Row>
-                    <Grid.Column width={8}>
+                    <Grid.Column width={12}>
+                      <Accordion>
+                        <Accordion.Title
+                          active={activeIndex === 0}
+                          index={0}
+                          onClick={this.handleClick}
+                        >
+                          <Header as="h3" dividing className="accordion-com">
+                            Comentarios <Icon name="dropdown" />
+                          </Header>
+                        </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 0}>
+                          <Comments />
+                        </Accordion.Content>
+
+                        {/* <Accordion.Title
+          active={activeIndex === 1}
+          index={1}
+          onClick={this.handleClick}
+        >
+          <Icon name="dropdown" />
+          What kinds of dogs are there?
+        </Accordion.Title>
+        <Accordion.Content active={activeIndex === 1}>
+          <p>
+            There are many breeds of dogs. Each breed varies in size and
+            temperament. Owners often select a breed of dog that they find to be
+            compatible with their own lifestyle and desires from a companion.
+          </p>
+        </Accordion.Content> */}
+                      </Accordion>
+                    </Grid.Column>
+                    <Grid.Column width={4}>
                       <h3>Compartir</h3>
                       <div>
                         <Button circular color="blue" icon="facebook" />
@@ -120,41 +172,9 @@ class DrawTimeLine extends Component {
                         <Button circular color="teal" icon="share" />
                       </div>
                     </Grid.Column>
-
-                    <Grid.Column width={8}>
-                      <h3>Comentar</h3>
-                    </Grid.Column>
                   </Grid.Row>
                 </Grid>
-                {/*    <Grid columns="equal">
-                  <Grid.Row>
-                  <Grid columns="3">
-<Grid.Column>
-
-</Grid.Column>
-                  </Grid>
-                    <Grid.Column>
-                      <img
-                        className="profile"
-                        alt={item.user}
-                        src={item.userPic}
-                      />
-
-                      <h2>{item.originalLangTitle}</h2>
-                      <h5 className="card-title">
-                        Publicado por: {item.user}{' '}
-                      </h5>
-                      <p className="date-post" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row>
-                    <Segment>
-                      <p>{item.originalLangPost}</p>
-                    </Segment>
-                    <Segment>
-                      <p>{item.spanishPost}</p>
-                    </Segment>
-                  </Grid.Row> */}
+                {/*  
 
                 {/* <Form reply>
                     <Button

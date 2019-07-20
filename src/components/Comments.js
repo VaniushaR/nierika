@@ -3,10 +3,6 @@ import { Comment, Header } from 'semantic-ui-react';
 
 const Comments = () => (
   <Comment.Group>
-    <Header as="h3" dividing>
-      Comentarios
-    </Header>
-
     <Comment>
       <Comment.Avatar src="https://react.semantic-ui.com/images/avatar/small/matt.jpg" />
       <Comment.Content>
@@ -32,7 +28,7 @@ const Comments = () => (
           <p>This has been very useful for my research. Thanks as well!</p>
         </Comment.Text>
         <Comment.Actions>
-          <Comment.Action>Reply</Comment.Action>
+          <Comment.Action>Responder</Comment.Action>
         </Comment.Actions>
       </Comment.Content>
       <Comment.Group>
@@ -45,7 +41,7 @@ const Comments = () => (
             </Comment.Metadata>
             <Comment.Text>Elliot you are always so right :)</Comment.Text>
             <Comment.Actions>
-              <Comment.Action>Reply</Comment.Action>
+              <Comment.Action>Responder</Comment.Action>
             </Comment.Actions>
           </Comment.Content>
         </Comment>

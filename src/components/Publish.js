@@ -85,10 +85,10 @@ class Publish extends Component {
     //   spanishPost: this.state.value1
     // });
     posting(
-      this.state.originalLangPost,
-      this.state.spanishPost,
       this.state.originalLangTitle,
-      this.state.spanishTitle
+      this.state.originalLangPost,
+      this.state.spanishTitle,
+      this.state.spanishPost
     );
     db.collection('timeLine')
       .get()
@@ -158,7 +158,6 @@ class Publish extends Component {
                           onChange={this.handleChange.bind(this)}
                           placeholder="Escribe el Título"
                         />
-
                         <TextArea
                           name="originalLangPost"
                           value={this.state.originalLangPost}
@@ -190,7 +189,7 @@ class Publish extends Component {
 
                         <TextArea
                           name="spanishPost"
-                          value={this.state.spanishData}
+                          value={this.state.spanishPost}
                           onChange={this.handleChange.bind(this)}
                           placeholder="Los usuarios validarán la traducción de tu texto..."
                         />
@@ -227,7 +226,6 @@ class Publish extends Component {
                 <Grid.Column>
                   <Segment>
                     <Checkbox toggle />
-
                     <h4>
                       Permitir que mi publicación y mis datos de hablante sean
                       utilizados para investigación y fomento al conocimiento de

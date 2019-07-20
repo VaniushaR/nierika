@@ -158,3 +158,12 @@ body {
   color: gray;
   font-size: 1em;
 }
+.publisher-btns {
+  padding-top: 0.7em;
+}
+.ui.accordion .title:not(.ui) {
+  padding: 0em;
+}
+.accordion-com {
+  padding: 0.5em;
+}
