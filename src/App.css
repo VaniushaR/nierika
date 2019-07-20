@@ -149,6 +149,12 @@ body {
   margin-left: 1em;
 }
 
-.input-form {
-  width: 100%;
+.sidebar-profile {
+  width: 50%vw;
+  height: 550px;
+}
+
+.date-post {
+  color: gray;
+  font-size: 1em;
 }

@@ -4,7 +4,8 @@ import DrawTimeLine from './DrawTimeLine';
 
 let user = [];
 let date = [];
-let textPosted = [];
+let originalLangPost = [];
+let originalLangTitle = [];
 let postImg = [];
 let totalPost = [];
 
@@ -52,7 +53,7 @@ class TimeLine extends Component {
 
   //querySnapshot.forEach(doc => {
   //console.log(
-  // `${doc.id} => ${doc.data().textPosted} => ${doc.data().date} => ${
+  // `${doc.id} => ${doc.data().originalLangPost} => ${doc.data().date} => ${
   //  doc.data().user
   // } => ${doc.data().userPic}`
 
@@ -78,11 +79,11 @@ class TimeLine extends Component {
 }
 
 export default TimeLine;
-//export { user, date, textPosted, postImg, totalPost };
+//export { user, date, originalLangPost, postImg, totalPost };
 
 /*
 oc.data().user,
                 doc.data().date,
-                doc.data().textPosted,
+                doc.data().originalLangPost,
                 doc.data().userPic, 
                 */

@@ -5,6 +5,7 @@ import firebase from 'firebase';
 import Navbar from './Navbar';
 import NewPublication from './NewPublication';
 import { db } from './Credentials';
+import TimeLine from './TimeLine';
 
 let currenUser;
 let picCurrenUser;
@@ -118,6 +119,7 @@ class Login extends Component {
           </nav>
           <Navbar />
           <NewPublication />
+          <TimeLine />
         </div>
       );
     } else {
