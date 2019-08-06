@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { db } from './Credentials';
 import { currenUser, picCurrenUser } from './Login';
 import LanguagesOptions from './Languages';
-import LocationOptions from './Locations';
 import TextTypes from './TextTypes';
 import {
   Feed,
@@ -125,22 +124,7 @@ class Publish extends Component {
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment>
-                    <Label attached="top">
-                      Selecciona la Lengua Originaria
-                    </Label>
-                    <LanguagesOptions />
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column>
-                  <Segment>
-                    <Label attached="top">Selecciona su localidad</Label>
-                    <LocationOptions />
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
+              <LanguagesOptions />
               <Grid.Row>
                 <Grid.Column>
                   <Segment padded>

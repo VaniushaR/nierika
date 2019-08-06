@@ -1,0 +1,109 @@
+[
+  {
+    "Language": "Afro-Seminole Creole",
+    "Abbreviation": "afs",
+    "State": "Coahuila de Zaragoza",
+    "Location": { "Location_1": "Nacimiento de los Negros" },
+    "Population": {
+      "Population_Number": 200,
+      "Population_Date_Consult": 1990,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": 500,
+      "Population_Date_Consult": 2007
+    },
+    "Status": "8a (Moribund)",
+    "Autonym": "",
+    "Alternate_Names": "Afro-Seminole Criollo, Mascogos",
+    "Dialects": "Mexico Afro-Seminole",
+    "Lexical_Similarity": "Bahamas Creole, 90% with Sea Island Creole [gul]",
+    "Classification": "Creole, English based, Atlantic, Eastern, Northern"
+  },
+  {
+    "Language": "Amuzgo, Guerrero",
+    "Abbreviation": "amu",
+    "State": "Guerrero",
+    "Location": {
+      "Location_1": "Xochistlahuaca municipality",
+      "Location_2": "Cochoapa",
+      "Location_3": "Cozoyoapan",
+      "Location_4": "Guadalupe Victoria",
+      "Location_5": "Huehuetonoc, Huistepec",
+      "Location_6": "Rancho del Cura",
+      "Location_7": "Tlacoachistlahuaca",
+      "Location_8": "Zacoalpan"
+    },
+    "Population": {
+      "Population_Number": 45900,
+      "Population_Date_Consult": 2011,
+      "Monolingual_Population": 10000,
+      "Monolingual_Population_Date_Consult": 1990
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "5 (Developing)",
+    "Autonym": "Ñomndaa",
+    "Alternate_Names": "Amuzgo de Guerrero, Jñom’ndaa, Nomndaa, Ñonda",
+    "Dialects": "Amuzgo del Norte, Amuzgo del Sur",
+    "Lexical_Similarity": "Most towns in Guerrero understand the Amuzgo spoken in Xochistlahuaca (Amuzgo del Norte). Huixtepec is a Guerrero town but has various dialectical differences (Amuzgo del Sur) Santa Catarina river separates Guerrero variety from Oaxaca varieties",
+    "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
+  },
+
+  {
+    "Language": "Amuzgo, Ipalapa",
+    "Abbreviation": "azm",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Putla district",
+      "Location_2": "La Ciénaga",
+      "Location_3": "Santa María Ipalapa northeast of San Pedro Amuzgos",
+      "Location_4": "Tlaxiaco to coast"
+    },
+    "Population": {
+      "Population_Number": 2030,
+      "Population_Date_Consult": 2011,
+      "Monolingual_Population": 20,
+      "Monolingual_Population_Date_Consult": 2000
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "6b (Threatened)",
+    "Autonym": "Jñunda",
+    "Alternate_Names": "Amuzgo Bajo del Este, Ts’unuma.",
+    "Dialects": "None Know",
+    "Lexical_Similarity": "Somewhat intelligible with other Amuzgo",
+    "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
+  },
+  {
+    "Language": "Amuzgo, San Pedro Amuzgos",
+    "Abbreviation": "azg",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Putla district",
+      "Location_2": "San Pedro Amuzgos",
+      "Location_3": "otros asentamientos"
+    },
+    "Population": {
+      "Population_Number": 5200,
+      "Population_Date_Consult": 2011,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "6a (Vigorous)",
+    "Autonym": "Jnꞌoon",
+    "Alternate_Names": "Amuzgo Bajo del Este, Amuzgo de Oaxaca, Amuzgo de San Pedro Amuzgos, Jñon’ndaa, Oaxaca Amuzgo, Ñonda",
+    "Dialects": "None known",
+    "Lexical_Similarity": "76% comprehension of Guerrero Amuzgo amu",
+    "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
+  }
+]
