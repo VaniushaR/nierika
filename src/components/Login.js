@@ -1,7 +1,5 @@
-//Componente Login para ingresar con Facebook
 import React, { Component } from 'react';
 import firebase from 'firebase';
-//import { Post } from './Post';
 import Navbar from './Navbar';
 import NewPublication from './NewPublication';
 import { db } from './Credentials';
@@ -94,7 +92,10 @@ class Login extends Component {
             >
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link">
+                  <a
+                    className="nav-link"
+                    href="https://vaniushar.github.io/nierika/"
+                  >
                     <img
                       className="profile"
                       src={this.state.user.photoURL}
@@ -106,7 +107,10 @@ class Login extends Component {
               </ul>
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link">
+                  <a
+                    className="nav-link"
+                    href="https://vaniushar.github.io/nierika/"
+                  >
                     <h3> {this.state.user.displayName}</h3>
                     <span className="sr-only">(current)</span>
                   </a>
@@ -154,51 +158,3 @@ class Login extends Component {
 
 export default Login;
 export { currenUser, picCurrenUser };
-/*
-
-handleUpload(event) {
-  const file = event.target.files[0];
-  const storageRef = firebase.storage().ref(`Fotos/${file.name}`);
-  const storageRef = firebase.storage().ref('/fotos/');
-  //const task = storageRef.put(file);
-  //const storageRef = firebase.database().ref(`pictures/${file.name}`);
-  //var task = storageRef.put(file);
-
-  task.on(
-    'state_changed',
-    snapshot => {
-      let percentage =
-        (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      this.setState({
-        uploadValue: percentage
-      });
-    },
-    error => {
-      console.error(error.message);
-    },
-    () =>
-      storageRef.getDownloadURL().then(url => {
-        const record = {
-          photoURL: this.state.user.photoURL,
-          displayName: this.state.user.displayName,
-          image: url
-          //image: task.snapshot.downloadURL
-        };
-        const databaseRef = firebase.database().ref('pictures');
-        const newPicture = databaseRef.push();
-        newPicture.set(record);
-      })
-  );
-}
-
- Upload complete
- console.log(task.snapshot);
-      storageRef
-        .child(file.name)
-        .getDownloadURL()
-        .then(url => {
-          this.setState({
-            picture: url
-          });
-        });
-*/

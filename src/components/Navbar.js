@@ -1,14 +1,5 @@
 //Crear componente de barra de navegación con bootstrap
 import React, { Component } from 'react';
-import {
-  Button,
-  Header,
-  Icon,
-  Image,
-  Menu,
-  Segment,
-  Sidebar
-} from 'semantic-ui-react';
 
 class Navbar extends Component {
   // state = { visible: false };
@@ -23,7 +14,12 @@ class Navbar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand">NIERIKA</a>
+          <a
+            className="navbar-brand"
+            href="https://vaniushar.github.io/nierika/"
+          >
+            NIERIKA
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -39,15 +35,21 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <a
-                // className="nav-link"
-                // disabled={visible}
-                // onClick={this.handleShowClick}
+                  href="https://vaniushar.github.io/nierika/"
+                  // className="nav-link"
+                  // disabled={visible}
+                  // onClick={this.handleShowClick}
                 >
                   Mi perfil
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link">Usuarios</a>
+                <a
+                  href="https://vaniushar.github.io/nierika/"
+                  className="nav-link"
+                >
+                  Usuarios
+                </a>
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">

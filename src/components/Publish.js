@@ -4,20 +4,15 @@ import { currenUser, picCurrenUser } from './Login';
 import LanguagesOptions from './Languages';
 import TextTypes from './TextTypes';
 import {
-  Feed,
   Icon,
   Button,
-  Divider,
   Segment,
   Checkbox,
   Grid,
   Label,
-  Select,
   Header,
-  List,
   TextArea,
-  Form,
-  Input
+  Form
 } from 'semantic-ui-react';
 
 //sconst sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive'];
@@ -119,7 +114,11 @@ class Publish extends Component {
                   <Segment>
                     <h4>
                       ¡Comparte con la comunidad una frase o texto en una lengua
-                      originaria! 😄
+                      originaria!{' '}
+                      <span role="img" alt="happy emoji face">
+                        {' '}
+                        😄
+                      </span>
                     </h4>
                   </Segment>
                 </Grid.Column>

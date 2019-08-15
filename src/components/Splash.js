@@ -14,9 +14,3 @@ class Splash extends Component {
 }
 
 export default Splash;
-
-//FIXME:
-//*-Agregar splash como estado de app.js y eliminar este componente
-//TODO:
-// - Revisar los estados y rutas en react
-// - Limpiar las importaciones de este componente

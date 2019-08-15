@@ -19,7 +19,7 @@ const TextTypes = () => {
         {sizes.map(size => (
           <List.Item key={size}>
             <List.Content>
-              <Checkbox class="check-option" label={size} />
+              <Checkbox className="check-option" label={size} />
             </List.Content>
           </List.Item>
         ))}
