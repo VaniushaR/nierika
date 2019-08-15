@@ -23,7 +23,7 @@ class LanguagesOptions extends Component {
 
   locationSelector(LangSelected) {
     MexicanLanguages.map(({ Abbreviation, Location }) => {
-      if (LangSelected == Abbreviation) {
+      if (LangSelected === Abbreviation) {
         for (let property in Location) {
           locationOption.push({
             value: Location[property],
@@ -31,6 +31,7 @@ class LanguagesOptions extends Component {
           });
         }
       }
+      return locationOption;
     });
   }
 
@@ -46,7 +47,7 @@ class LanguagesOptions extends Component {
             <Dropdown
               placeholder="Selecciona Lenguaje"
               fluid
-              clearable
+              clearable="true"
               search
               options={options}
               onChange={this.handleChange}
@@ -59,7 +60,7 @@ class LanguagesOptions extends Component {
             <Dropdown
               placeholder="Estado, Municipio, Localidad"
               fluid
-              clearable
+              clearable="true"
               search
               options={locationOption}
               onChange={this.locationSelector(this.state.languageSelection)}

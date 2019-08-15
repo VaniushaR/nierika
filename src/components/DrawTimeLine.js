@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Feed,
   Grid,
   Icon,
   Button,
-  Comment,
-  Form,
-  Flag,
   Segment,
-  Image,
   Label,
   Rating,
   GridColumn,
@@ -16,7 +11,7 @@ import {
   Header
 } from 'semantic-ui-react';
 import Comments from './Comments';
-import { currenUser, picCurrenUser } from './Login';
+//simport { currenUser, picCurrenUser } from './Login';
 
 class DrawTimeLine extends Component {
   // toStrDate => (
@@ -43,7 +38,7 @@ class DrawTimeLine extends Component {
     return (
       <div>
         {this.props.post.map(item => (
-          <div className="main">
+          <div key={item.date} className="main">
             <section className="timeLine">
               <Segment>
                 <Grid celled="internally">

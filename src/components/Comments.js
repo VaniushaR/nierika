@@ -1,5 +1,5 @@
 import React from 'react';
-import { Comment, Header } from 'semantic-ui-react';
+import { Comment } from 'semantic-ui-react';
 
 const Comments = () => (
   <Comment.Group>
