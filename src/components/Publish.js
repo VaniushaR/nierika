@@ -24,7 +24,13 @@ const posting = (
   spanishPost
 ) => {
   const d = new Date();
-  const postDate = d.toDateString();
+  //const postDate = d.toDateString(); weekday: 'long',
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+  const postDate = d.toLocaleDateString('es-ME', options);
 
   db.collection('timeLine')
     .add({

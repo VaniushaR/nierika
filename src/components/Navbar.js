@@ -36,7 +36,7 @@ class Navbar extends Component {
               <li className="nav-item">
                 <a
                   href="https://vaniushar.github.io/nierika/"
-                  // className="nav-link"
+                  className="nav-link"
                   // disabled={visible}
                   // onClick={this.handleShowClick}
                 >

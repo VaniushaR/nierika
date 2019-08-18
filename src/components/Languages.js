@@ -17,7 +17,7 @@ class LanguagesOptions extends Component {
     super();
     this.state = {
       languageSelection: '',
-      languageLocation: ''
+      languageLocation: locationOption
     };
   }
 
@@ -36,8 +36,10 @@ class LanguagesOptions extends Component {
   }
 
   handleChange = (e, { languageSelection, value }) => {
+    locationOption = [];
     this.setState({ languageSelection: value });
   };
+
   render() {
     return (
       <Grid.Row>

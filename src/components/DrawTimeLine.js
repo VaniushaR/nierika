@@ -57,7 +57,7 @@ class DrawTimeLine extends Component {
                       <h6>Lengua Originaria, localidad, Municipio, País</h6>
                     </Grid.Column>
                     <Grid.Column width={3}>
-                      <p>13 de julio de 2019</p>
+                      <p>{item.date}</p>
                       <Button as="div" labelPosition="left">
                         <Label as="a" basic color="red" pointing="right">
                           2,048
