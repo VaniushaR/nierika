@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { db } from './Credentials';
+import NewPublication from './NewPublication';
 import DrawTimeLine from './DrawTimeLine';
 
 class TimeLine extends Component {
@@ -26,6 +27,7 @@ class TimeLine extends Component {
   render() {
     return (
       <div>
+        <NewPublication />
         <DrawTimeLine post={this.state.posts} />
       </div>
     );
