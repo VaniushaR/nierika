@@ -5,7 +5,7 @@ class Nav extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link to="/">
+        <Link to="/nierika">
           <a
             className="navbar-brand"
             href="https://vaniushar.github.io/nierika/"
