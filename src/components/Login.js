@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import Navbar from './Navbar';
-import NewPublication from './NewPublication';
 import { db } from './Credentials';
+import Nav from './Nav';
+//import NewPublication from './NewPublication';
+//import TimeLine from './TimeLine';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import UsersList from './UsersList';
 import TimeLine from './TimeLine';
+import Profile from './Profile.jsx';
 
 let currenUser;
 let picCurrenUser;
@@ -121,9 +125,14 @@ class Login extends Component {
               </button>
             </div>
           </nav>
-          <Navbar />
-          <NewPublication />
-          <TimeLine />
+          <Router>
+            <Nav />
+            <Switch>
+              <Route path="/" exact component={TimeLine} />
+              <Route path="/usuarios" component={UsersList} />
+              <Route path="/perfil" component={Profile} />
+            </Switch>
+          </Router>
         </div>
       );
     } else {

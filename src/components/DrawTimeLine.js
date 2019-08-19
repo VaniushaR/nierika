@@ -11,16 +11,8 @@ import {
   Header
 } from 'semantic-ui-react';
 import Comments from './Comments';
-//simport { currenUser, picCurrenUser } from './Login';
 
 class DrawTimeLine extends Component {
-  // toStrDate => (
-  //   console.log(this.props.post);
-  //       this.props.post.map(item =>
-  //         let timeSta = item.date;
-  //         let toDat = toDate(timeSta)
-  //         console.log(toDat));
-  // );
   state = { activeIndex: 0 };
 
   handleClick = (e, titleProps) => {
@@ -33,12 +25,13 @@ class DrawTimeLine extends Component {
 
   render() {
     console.log(this.props.post);
+
     const { activeIndex } = this.state; //ACCORDION
 
     return (
       <div>
-        {this.props.post.map(item => (
-          <div key={item.date} className="main">
+        {this.props.post.map((item, key) => (
+          <div key={key} className="main">
             <section className="timeLine">
               <Segment>
                 <Grid celled="internally">
@@ -54,10 +47,12 @@ class DrawTimeLine extends Component {
                     <Grid.Column width={10}>
                       <h2>{item.originalLangTitle}</h2>
                       <h3>{item.spanishTitle}</h3>
-                      <h6>Lengua Originaria, localidad, Municipio, País</h6>
+                      <h6>
+                        {item.language} de {item.language_location}.
+                      </h6>
                     </Grid.Column>
                     <Grid.Column width={3}>
-                      <p>13 de julio de 2019</p>
+                      <p>{item.date}</p>
                       <Button as="div" labelPosition="left">
                         <Label as="a" basic color="red" pointing="right">
                           2,048

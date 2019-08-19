@@ -14,8 +14,7 @@ import {
   TextArea,
   Form
 } from 'semantic-ui-react';
-
-//sconst sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive'];
+import { language, location } from './Languages';
 
 const posting = (
   originalLangTitle,
@@ -24,17 +23,28 @@ const posting = (
   spanishPost
 ) => {
   const d = new Date();
-  const postDate = d.toDateString();
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+  const postDate = d.toLocaleDateString('es-ME', options);
+  let allowInv = true;
 
   db.collection('timeLine')
     .add({
       date: postDate,
       user: currenUser,
       userPic: picCurrenUser,
+      language: language,
+      language_location: location,
       originalLangTitle: originalLangTitle,
       originalLangPost: originalLangPost,
       spanishTitle: spanishTitle,
-      spanishPost: spanishPost
+      spanishPost: spanishPost,
+      textTag: '',
+      img: '',
+      allow_inv: allowInv
     })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
@@ -63,12 +73,16 @@ class Publish extends Component {
   handleChange(e) {
     // this.setState({ value: e.target.value });
     // console.log(this.state.value);
+    console.log(language, location);
+    this.setState({ language: language, langLocation: location });
     this.setState({
       [e.target.name]: e.target.value
     });
     console.log(
-      'estados ' + this.state.spanishTitle,
-      ' y ' + this.state.originalLangTitle
+      ' titulo en esp ' + this.state.spanishTitle,
+      ' titulo en LI ' + this.state.originalLangTitle,
+      ' lang: ' + this.state.language,
+      ' loc ' + this.state.langLocation
     );
   }
 
@@ -241,203 +255,6 @@ class Publish extends Component {
 
 export default Publish;
 
-/* Notes:
-import React, { Component } from 'react';
-import { db } from './Credentials';
-import { currenUser, picCurrenUser } from './Login';
-import LanguagesOptions from './Languages';
-import LocationOptions from './Locations';
-import TextTypes from './TextTypes';
-import {
-  Feed,
-  Icon,
-  Button,
-  Divider,
-  Segment,
-  Checkbox,
-  Grid,
-  Label,
-  Select,
-  Header,
-  List,
-  TextArea,
-  Form
-} from 'semantic-ui-react';
-
-const sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive'];
-
-const posting = originalLangPost => {
-  const postDate = new Date();
-
-  const locationOptions = [
-    { name: 'Baja California Sur, San Pancho' },
-    { name: 'Puebla, San Andrés' },
-    { name: 'Veracruz, Tlacotalpan' }
-  ];
-
-  db.collection('timeLine')
-    .add({
-      originalLangPost,
-      date: postDate,
-      user: currenUser,
-      userPic: picCurrenUser
-    })
-    .then(function(docRef) {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
-};
-
-class Publish extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-      originalLangPost: '',
-      language: ''
-    };
-  }
-
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-  }
-
-  handleClick() {
-    this.setState({ originalLangPost: this.state.value });
-    posting(this.state.value);
-    db.collection('timeLine')
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {});
-      });
-  }
-
-  render() {
-    return (
-      <div className="newPost">
-        <section className="timeLine">
-          <Segment raised>
-            <Grid columns="equal">
-              <Grid.Row>
-                <Grid.Column>
-                  <Header as="h2">
-                    <img
-                      src={picCurrenUser}
-                      alt={currenUser}
-                      className="profile"
-                    />
-                    {currenUser}
-                  </Header>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment>
-                    <h4>
-                      ¡Comparte con la comunidad una frase o texto en una lengua
-                      originaria! 😄
-                    </h4>
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment>
-                    <Label attached="top">
-                      Selecciona la Lengua Originaria
-                    </Label>
-                    <LanguagesOptions />
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column>
-                  <Segment>
-                    <Label attached="top">Selecciona su localidad</Label>
-                    <LocationOptions />
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment padded>
-                    <Label attached="top">Escribe en Lengua Originaria </Label>
-                    <Form>
-                      <TextArea
-                        value={this.state.value}
-                        onChange={this.handleChange.bind(this)}
-                        placeholder="A bird in a branch have not fear because it is confidence is on its wings"
-                      />
-                    </Form>
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment padded>
-                    <Label attached="top">
-                      Agrega la traducción al español
-                    </Label>
-
-                    <Form>
-                      <TextArea placeholder="Los usuarios validarán la traducción de tu texto..." />
-                    </Form>
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment padded>
-                    <Label attached="top right">
-                      Si quieres agrega una imagen
-                    </Label>
-                    <Button color="teal">Buscar en mis archivos</Button> &nbsp;
-                    <Button color="orange">Acceder a la cámara</Button>
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column>
-                  <Segment>
-                    <Label attached="top right">
-                      Selecciona el tipo de contenido
-                    </Label>
-                    <TextTypes />
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row />
-              <Grid.Row>
-                <Grid.Column>
-                  <Segment.Group horizontal>
-                    <Segment>
-                      <Checkbox toggle />
-                    </Segment>
-                    <Segment>
-                      <h4>
-                        Permitir que mi publicación y mis datos de hablante sean
-                        utilizados para investigación y fomento al conocimiento
-                        de las Lenguas Originarias
-                      </h4>
-                    </Segment>
-                    <Segment>
-                      <Button
-                        onClick={this.handleClick.bind(this)}
-                        color="green"
-                      >
-                        Publicar{' '}
-                      </Button>
-                    </Segment>
-                  </Segment.Group>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Segment>
-
-          <div className="card-footer text-muted"> </div>
-        </section>
-      </div>
-    );
-  }
-}
-
-export default Publish;
-*/
+//TODO: Allow investigation prechecked value to true, allow turn it to false with a e listenner
+//TODO: Allow img posting to DB
+//TODO: Allow the array creation for tags selection and get the logic for draw it on the post
