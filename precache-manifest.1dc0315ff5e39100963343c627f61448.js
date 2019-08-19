@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a1d8f24370a2523862a4",
+    "revision": "d325a747a9c9c70176bd",
     "url": "/nierika/static/css/main.8bcb5bfa.chunk.css"
   },
   {
-    "revision": "a1d8f24370a2523862a4",
-    "url": "/nierika/static/js/main.a1d8f243.chunk.js"
+    "revision": "d325a747a9c9c70176bd",
+    "url": "/nierika/static/js/main.d325a747.chunk.js"
   },
   {
     "revision": "658885a98eb893b3a3d0",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/nierika/static/media/fb.cdbce77d.png"
   },
   {
-    "revision": "ae8b576b4a0090ec56ed24c0d563c750",
+    "revision": "6b81d10457d71b7997c657fadf071db7",
     "url": "/nierika/index.html"
   }
 ];
