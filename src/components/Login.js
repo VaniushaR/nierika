@@ -7,6 +7,7 @@ import Nav from './Nav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import UsersList from './UsersList';
 import TimeLine from './TimeLine';
+import Profile from './Profile.jsx';
 
 let currenUser;
 let picCurrenUser;
@@ -129,6 +130,7 @@ class Login extends Component {
             <Switch>
               <Route path="/" exact component={TimeLine} />
               <Route path="/usuarios" component={UsersList} />
+              <Route path="/perfil" component={Profile} />
             </Switch>
           </Router>
         </div>

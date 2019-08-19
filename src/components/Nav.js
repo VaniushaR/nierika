@@ -13,7 +13,7 @@ class Nav extends Component {
             NIERIKA
           </a>
         </Link>
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -21,20 +21,21 @@ class Nav extends Component {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+        > */}
+        {/* <span className="navbar-toggler-icon" />
+        </button> */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a
-                href="https://vaniushar.github.io/nierika/"
-                className="nav-link"
-                // disabled={visible}
-                // onClick={this.handleShowClick}
-              >
-                Mi perfil
-              </a>
+              <Link to="/perfil">
+                <a
+                  className="nav-link"
+                  // disabled={visible}
+                  // onClick={this.handleShowClick}
+                >
+                  Mi perfil
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link to="/usuarios">

@@ -4,26 +4,26 @@ import MexicanLanguages from '../data/mexican_languages';
 
 const options = MexicanLanguages.map(
   ({ Abbreviation, Language, State, Location, Autonym }) => ({
-    value: Abbreviation,
+    value: Language,
     text: '[' + Abbreviation + ']  ' + Language + ' / ' + Autonym,
     flag: 'mx'
   })
 );
-
 let locationOption = [];
+let language;
+let location;
 
 class LanguagesOptions extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      languageSelection: '',
-      languageLocation: locationOption
+      languageSelection: ''
     };
   }
 
   locationSelector(LangSelected) {
-    MexicanLanguages.map(({ Abbreviation, Location }) => {
-      if (LangSelected === Abbreviation) {
+    MexicanLanguages.map(({ Language, Location }) => {
+      if (LangSelected === Language) {
         for (let property in Location) {
           locationOption.push({
             value: Location[property],
@@ -35,9 +35,16 @@ class LanguagesOptions extends Component {
     });
   }
 
-  handleChange = (e, { languageSelection, value }) => {
+  handleChange = (e, { value, name }) => {
     locationOption = [];
     this.setState({ languageSelection: value });
+    console.log(value);
+    language = value;
+  };
+
+  handleSel = (e, { value }) => {
+    console.log('val: ' + value);
+    location = value;
   };
 
   render() {
@@ -65,7 +72,10 @@ class LanguagesOptions extends Component {
               clearable="true"
               search
               options={locationOption}
-              onChange={this.locationSelector(this.state.languageSelection)}
+              onChange={
+                (this.locationSelector(this.state.languageSelection),
+                this.handleSel)
+              }
             />
           </Segment>
         </Grid.Column>
@@ -75,9 +85,4 @@ class LanguagesOptions extends Component {
 }
 
 export default LanguagesOptions;
-
-/*TODO: 
-  1. Set state for the location of the language selection
-  2. Clear location's array when the user change the selection of languaje 
-
-*/
+export { language, location };
