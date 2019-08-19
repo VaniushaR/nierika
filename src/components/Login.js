@@ -128,7 +128,7 @@ class Login extends Component {
           <Router>
             <Nav />
             <Switch>
-              <Route path="/" exact component={TimeLine} />
+              <Route path="/nierika" exact component={TimeLine} />
               <Route path="/usuarios" component={UsersList} />
               <Route path="/perfil" component={Profile} />
             </Switch>
