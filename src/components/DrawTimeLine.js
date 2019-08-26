@@ -28,6 +28,8 @@ class DrawTimeLine extends Component {
 
     const { activeIndex } = this.state; //ACCORDION
 
+    let x;
+
     return (
       <div>
         {this.props.post.map((item, key) => (
@@ -75,22 +77,18 @@ class DrawTimeLine extends Component {
                   <Grid.Row>
                     <GridColumn width={2}>Etiquetas</GridColumn>
                     <Grid.Column width={14}>
-                      <Label as="a" color="blue">
-                        Narración Verídica
-                      </Label>
-                      <Label as="a" color="orange" key="orange">
-                        Cuento
-                      </Label>
-                      <Label as="a" color="green" key="green">
-                        Vocabulario
-                      </Label>
-                      <Label as="a" color="red" key="red">
-                        Gramática
-                      </Label>
+                      {item.textTag.map(color => (
+                        <Label key={color} tag>
+                          {color}
+                        </Label>
+                      ))}
                     </Grid.Column>
                   </Grid.Row>
                   <Grid.Row>
                     <Grid.Column width={16}>
+                      <Segment>
+                        <img src={item.img} />
+                      </Segment>
                       <Segment>
                         <p>{item.originalLangPost}</p>
                         <Segment.Group horizontal>
@@ -135,22 +133,6 @@ class DrawTimeLine extends Component {
                         <Accordion.Content active={activeIndex === 0}>
                           <Comments />
                         </Accordion.Content>
-
-                        {/* <Accordion.Title
-          active={activeIndex === 1}
-          index={1}
-          onClick={this.handleClick}
-        >
-          <Icon name="dropdown" />
-          What kinds of dogs are there?
-        </Accordion.Title>
-        <Accordion.Content active={activeIndex === 1}>
-          <p>
-            There are many breeds of dogs. Each breed varies in size and
-            temperament. Owners often select a breed of dog that they find to be
-            compatible with their own lifestyle and desires from a companion.
-          </p>
-        </Accordion.Content> */}
                       </Accordion>
                     </Grid.Column>
                     <Grid.Column width={4}>
@@ -164,65 +146,6 @@ class DrawTimeLine extends Component {
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
-                {/*  
-
-                {/* <Form reply>
-                    <Button
-                      content="Editar"
-                      labelPosition="left"
-                      icon="edit"
-                      primary
-                    />
-                    <Button
-                      content="Eliminar"
-                      color="red"
-                      labelPosition="left"
-                      icon="trash alternate"
-                    />
-                  </Form>
-
-                  <p className="card-text"> </p>
-                  <a className="btn btn-Success" /> */}
-
-                {/* <Feed>
-                    <Feed.Event>
-                      <Feed.Content>
-                        <Feed.Meta>
-                          <Feed.Like>
-                            <Icon name="like" />4 Likes
-                          </Feed.Like>
-                          <input
-                            placeholder="¿A qué lengua pertenece?"
-                            id="Language"
-                          />
-                        </Feed.Meta>
-                      </Feed.Content>
-                    </Feed.Event>
-                  </Feed>
-                  <div className="card-footer text-muted"> </div>
-                  <div className="card-header">
-                    <Comment.Group>
-                      <p>Comentar...</p>
-                      <img
-                        src={picCurrenUser}
-                        alt={currenUser}
-                        className="profile"
-                      />
-                      <h3> {currenUser}</h3>
-
-                      <Form reply>
-                        <Form.TextArea />
-                        <Button
-                          content="Agregar Comentario"
-                          labelPosition="left"
-                          icon="edit"
-                          primary
-                        />
-                      </Form>
-                    </Comment.Group>
-                    <Coments />
-                  </div> */}
-                {/* </Grid> */}
               </Segment>
             </section>
           </div>

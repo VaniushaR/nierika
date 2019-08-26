@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { db } from './Credentials';
+import { db, storage } from './Credentials';
 import { currenUser, picCurrenUser } from './Login';
 import LanguagesOptions from './Languages';
 import TextTypes from './TextTypes';
 import {
   Icon,
+  Input,
   Button,
   Segment,
   Checkbox,
@@ -15,12 +16,16 @@ import {
   Form
 } from 'semantic-ui-react';
 import { language, location } from './Languages';
+import { selection } from './TextTypes';
 
+let image;
 const posting = (
   originalLangTitle,
   originalLangPost,
   spanishTitle,
-  spanishPost
+  spanishPost,
+  imgUpload,
+  allowInv
 ) => {
   const d = new Date();
   const options = {
@@ -29,8 +34,9 @@ const posting = (
     day: 'numeric'
   };
   const postDate = d.toLocaleDateString('es-ME', options);
-  let allowInv = true;
-
+  //keep img in storage
+  console.log(image);
+  //call img funk
   db.collection('timeLine')
     .add({
       date: postDate,
@@ -42,8 +48,8 @@ const posting = (
       originalLangPost: originalLangPost,
       spanishTitle: spanishTitle,
       spanishPost: spanishPost,
-      textTag: '',
-      img: '',
+      textTag: selection,
+      img: imgUpload,
       allow_inv: allowInv
     })
     .then(function(docRef) {
@@ -66,43 +72,102 @@ class Publish extends Component {
       langLocation: '',
       contentType: '',
       postImg: '',
-      allowInv: ''
+      imgUpload: '',
+      allowInv: true
     };
   }
 
   handleChange(e) {
-    // this.setState({ value: e.target.value });
-    // console.log(this.state.value);
-    console.log(language, location);
     this.setState({ language: language, langLocation: location });
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(
-      ' titulo en esp ' + this.state.spanishTitle,
-      ' titulo en LI ' + this.state.originalLangTitle,
-      ' lang: ' + this.state.language,
-      ' loc ' + this.state.langLocation
-    );
+  }
+
+  handleUpload(e) {
+    image = '';
+    if (e.target.files[0]) {
+      image = e.target.files[0];
+      this.storageImg(image);
+    } else {
+      image = '';
+    }
   }
 
   handleClick() {
     console.log(this.state.originalLangTitle, this.state.spanishTitle);
-    // this.setState({
-    //   originalLangPost: this.state.value,
-    //   spanishPost: this.state.value1
-    // });
-    posting(
-      this.state.originalLangTitle,
-      this.state.originalLangPost,
-      this.state.spanishTitle,
-      this.state.spanishPost
-    );
-    db.collection('timeLine')
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {});
+    // this.validations.bind(this);
+    if (
+      this.state.language == '' ||
+      this.state.originalLangPost == '' ||
+      this.state.originalLangTitle == '' ||
+      this.state.spanishTitle == '' ||
+      this.state.spanishPost == ''
+    ) {
+      alert('Por favor llena todos los campos');
+    } else {
+      posting(
+        this.state.originalLangTitle,
+        this.state.originalLangPost,
+        this.state.spanishTitle,
+        this.state.spanishPost,
+        this.state.imgUpload,
+        this.state.allowInv
+      );
+
+      db.collection('timeLine')
+        .get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {});
+        });
+      //restart the values:
+      this.setState({
+        originalLangTitle: '',
+        originalLangPost: '',
+        spanishTitle: '',
+        spanishPost: '',
+        language: '',
+        langLocation: '',
+        contentType: '',
+        postImg: '',
+        imgUpload: '',
+        allowInv: true
       });
+    }
+  }
+
+  checkboxValue() {
+    console.log(this.state.allowInv);
+    console.log('tipo:' + typeof this.state.allowInv);
+    this.setState({
+      allowInv: !this.state.allowInv
+    });
+  }
+
+  storageImg(image) {
+    const uploadTask = storage.ref(`postImages/${image.name}`).put(image);
+    uploadTask.on(
+      'state_changed',
+      snapshot => {
+        console.log('progress');
+      },
+      error => {
+        console.log(error);
+      },
+      () => {
+        console.log('completed');
+        storage
+          .ref('postImages')
+          .child(image.name)
+          .getDownloadURL()
+          .then(url => {
+            console.log('img-url : ', url);
+            // image = url;
+            return this.setState({ imgUpload: url });
+            // return image;
+          });
+      }
+    );
   }
 
   render() {
@@ -203,7 +268,12 @@ class Publish extends Component {
                       <Icon name="camera retro" />
                       Si quieres agrega una imagen
                     </Label>
-                    <Button color="teal">Buscar en mis archivos</Button> &nbsp;
+                    <Input
+                      type="file"
+                      onChange={this.handleUpload.bind(this)}
+                    />
+                    &nbsp;
+                    <Button color="teal">Subir</Button>
                     <Button color="orange">Acceder a la cámara</Button>
                   </Segment>
                 </Grid.Column>
@@ -222,7 +292,11 @@ class Publish extends Component {
               <Grid.Row>
                 <Grid.Column>
                   <Segment>
-                    <Checkbox toggle />
+                    <Checkbox
+                      toggle
+                      defaultChecked
+                      onChange={this.checkboxValue.bind(this)}
+                    />
                     <h4>
                       Permitir que mi publicación y mis datos de hablante sean
                       utilizados para investigación y fomento al conocimiento de
