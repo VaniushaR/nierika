@@ -23,6 +23,25 @@ class DrawTimeLine extends Component {
     this.setState({ activeIndex: newIndex });
   };
 
+  handlePythonScripts = (e, postClicked) => {
+    console.log('python func from react');
+    fetch(
+      '../../NLP/bilingual.json'
+      // {
+      // headers: {
+      //   'Content-Type': 'application/json',
+      //   Accept: 'application/json'
+      // }
+      // }
+    ).then(
+      res => console.log(res.json()),
+
+      error => {
+        console.log(error);
+      }
+    );
+  };
+
   render() {
     console.log(this.props.post);
 
@@ -114,6 +133,11 @@ class DrawTimeLine extends Component {
                             />
                           </Segment>
                         </Segment.Group>
+                      </Segment>
+                      <Segment>
+                        <button onClick={this.handlePythonScripts}>
+                          Aprender
+                        </button>
                       </Segment>
                     </Grid.Column>
                   </Grid.Row>
