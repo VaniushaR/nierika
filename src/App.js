@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //setTimeOut for the wolf splash
+    //setTimeOut for the wolf splash 2000mls
     if (!this.state.splashEnded) {
       setTimeout(() => this.setState({ splashEnded: true }), 2000);
     }
@@ -29,7 +29,12 @@ class App extends Component {
       <div className="main">
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="Nierika Huirrarica" />
+            <img
+              src={logo}
+              className="App-logo"
+              alt="Nierika Huirrarica"
+              href="https://vaniushar.github.io/nierika/"
+            />
             <h1 className="App-title">Nierika</h1>
           </header>
           <Login />

@@ -12,6 +12,26 @@ import {
 } from 'semantic-ui-react';
 import Comments from './Comments';
 
+import { createSecureContext } from 'tls';
+
+//edition available if
+// const handleEdition = (e, user) => {
+//   if (currentUser == user) {
+//     console.log('este usuario debería poder editar');
+//   } else {
+//     console.log('no puede editar porque no es post suyo');
+//   }
+// };
+
+// const handleDeletion = (e, user) => {
+//   if (currentUser == user) {
+//     console.log('usuario:' + user);
+//     console.log('este usuario puede borrar esto');
+//   } else {
+//     console.log('no puede borrar este post');
+//   }
+// };
+//console.log(currentUser);
 class DrawTimeLine extends Component {
   state = { activeIndex: 0 };
 
@@ -19,7 +39,6 @@ class DrawTimeLine extends Component {
     const { index } = titleProps;
     const { activeIndex } = this.state;
     const newIndex = activeIndex === index ? -1 : index;
-
     this.setState({ activeIndex: newIndex });
   };
 
@@ -89,6 +108,7 @@ class DrawTimeLine extends Component {
                           inverted
                           color="grey"
                           icon="trash alternate"
+                          // onClick={handleDeletion(item.user)}
                         />
                       </div>
                     </Grid.Column>

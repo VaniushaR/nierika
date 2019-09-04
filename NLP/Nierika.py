@@ -1,6 +1,7 @@
 # NLP from Nierkia database corpus compilation
 # Author: Vania Ramírez
 # Date: september 2019
+
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize import sent_tokenize
 import json

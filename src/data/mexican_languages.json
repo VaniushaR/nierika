@@ -105,5 +105,86 @@
     "Dialects": "None known",
     "Lexical_Similarity": "76% comprehension of Guerrero Amuzgo amu",
     "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
+  },
+  {
+    "Language": "Chatino, Eastern Highland  ",
+    "Abbreviation": "cly",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Juquila district",
+      "Location_2": "Santa María Yolotepec"
+    },
+    "Population": {
+      "Population_Number": 1800,
+      "Population_Date_Consult": 2000,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino Oriental Alto, Chatino de la Zona Alta Oriental, Lachao-Yolotepec Chatino, Sierra Oriental Chatino",
+    "Dialects": "One dialect.",
+    "Lexical_Similarity": "Uses lengthened word forms similar to Zenzontepec Chatino czn[czn]. Reportedly similar to Zacatepec ctz[ctz], but geographically and socioeconomically separated. 87% intelligibility of Yaitepec dialect of Western Highland Chatino ctp[ctp], 83% of Nopala cya[cya], 77% of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 21% of Tataltepec cta[cta].",
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino."
+  },
+  {
+    "Language": "Chatino, Nopala",
+    "Abbreviation": "cya",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Juquila district",
+      "Location_2": "Atotonilco",
+      "Location_3": "Cerro el Aire",
+      "Location_4": "San Gabriel",
+      "Location_5": "Mixtepec",
+      "Location_6": "San María Magdalena Tiltepec",
+      "Location_7": "Teotepec"
+    },
+    "Population": {
+      "Population_Number": 8840,
+      "Population_Date_Consult": 2000,
+      "Monolingual_Population": 2300,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "5 (Developing)",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino Oriental Bajo",
+    "Dialects": "None known",
+    "Lexical_Similarity": "59% intelligibility of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 73% of Yaitepec dialect of Western Highland Chatino ctp[ctp], 13% of Tataltepec Chatino cta[cta].",
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino"
+  },
+  {
+    "Language": "",
+    "Abbreviation": "azg",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Putla district",
+      "Location_2": "San Pedro Amuzgos",
+      "Location_3": "otros asentamientos"
+    },
+    "Population": {
+      "Population_Number": 5200,
+      "Population_Date_Consult": 2011,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "6a (Vigorous)",
+    "Autonym": "Jnꞌoon",
+    "Alternate_Names": "Amuzgo Bajo del Este, Amuzgo de Oaxaca, Amuzgo de San Pedro Amuzgos, Jñon’ndaa, Oaxaca Amuzgo, Ñonda",
+    "Dialects": "None known",
+    "Lexical_Similarity": "76% comprehension of Guerrero Amuzgo amu",
+    "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
   }
 ]

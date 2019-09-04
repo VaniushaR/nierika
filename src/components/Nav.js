@@ -10,9 +10,37 @@ class Nav extends Component {
             className="navbar-brand"
             href="https://vaniushar.github.io/nierika/"
           >
-            NIERIKA
+            Línea de Tiempo
           </a>
         </Link>
+
+        <Link to="/perfil">
+          <a
+            className="navbar-brand"
+            // disabled={visible}
+            // onClick={this.handleShowClick}
+          >
+            Mi perfil
+          </a>
+        </Link>
+
+        <Link to="/usuarios">
+          <a className="navbar-brand">Usuarios</a>
+        </Link>
+        <form className="form-inline my-2 my-lg-0 input-align">
+          <input
+            className="form-control mr-sm-2"
+            type="search"
+            placeholder="Buscar post sobre..."
+            aria-label="Search"
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+          >
+            Buscar
+          </button>
+        </form>
         {/* <button
           className="navbar-toggler"
           type="button"
@@ -24,7 +52,7 @@ class Nav extends Component {
         > */}
         {/* <span className="navbar-toggler-icon" />
         </button> */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/perfil">
@@ -57,7 +85,7 @@ class Nav extends Component {
               Buscar
             </button>
           </form>
-        </div>
+        </div> */}
       </nav>
     );
   }

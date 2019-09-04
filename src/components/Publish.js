@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { db, storage } from './Credentials';
-import { currenUser, picCurrenUser } from './Login';
+import { currentUser, picCurrentUser } from './Login';
 import LanguagesOptions from './Languages';
 import TextTypes from './TextTypes';
 import {
@@ -40,8 +40,8 @@ const posting = (
   db.collection('timeLine')
     .add({
       date: postDate,
-      user: currenUser,
-      userPic: picCurrenUser,
+      user: currentUser,
+      userPic: picCurrentUser,
       language: language,
       language_location: location,
       originalLangTitle: originalLangTitle,
@@ -180,11 +180,11 @@ class Publish extends Component {
                 <Grid.Column>
                   <Header as="h2">
                     <img
-                      src={picCurrenUser}
-                      alt={currenUser}
+                      src={picCurrentUser}
+                      alt={currentUser}
                       className="profile"
                     />
-                    {currenUser}
+                    {currentUser}
                   </Header>
                 </Grid.Column>
               </Grid.Row>
@@ -218,13 +218,13 @@ class Publish extends Component {
                           name="originalLangTitle"
                           value={this.state.originalLangTitle}
                           onChange={this.handleChange.bind(this)}
-                          placeholder="Escribe el Título"
+                          placeholder="Escribe el Título en su lengua original"
                         />
                         <TextArea
                           name="originalLangPost"
                           value={this.state.originalLangPost}
                           onChange={this.handleChange.bind(this)}
-                          placeholder="A bird in a branch have not fear because it is confidence is on its wings"
+                          placeholder="Escribe contenido en lengua original. Preferentemente utiliza puntuación para seccionar las frases en ambas lenguas. Cada aportación es muy valiosa e importante para el conocimiento de las lenguas indígenas originarias de neustro país."
                         />
                       </Segment>
                     </Form>
@@ -253,7 +253,7 @@ class Publish extends Component {
                           name="spanishPost"
                           value={this.state.spanishPost}
                           onChange={this.handleChange.bind(this)}
-                          placeholder="Los usuarios validarán la traducción de tu texto..."
+                          placeholder="Escribe la traducción al español equivalente en frases al texto original. Preferentemente utiliza puntuación para seccionar las frases en ambas lenguas. Otros usuarios que compartan la lengua originaria podrán validar y enriquecer tu traducción."
                         />
                       </Segment>
                     </Form>
@@ -270,10 +270,10 @@ class Publish extends Component {
                     </Label>
                     <Input
                       type="file"
+                      color="teal"
                       onChange={this.handleUpload.bind(this)}
                     />
                     &nbsp;
-                    <Button color="teal">Subir</Button>
                     <Button color="orange">Acceder a la cámara</Button>
                   </Segment>
                 </Grid.Column>
@@ -308,6 +308,7 @@ class Publish extends Component {
               <Grid.Row>
                 <Grid.Column>
                   <Button
+                    className="publicar-btn"
                     icon
                     labelPosition="right"
                     onClick={this.handleClick.bind(this)}

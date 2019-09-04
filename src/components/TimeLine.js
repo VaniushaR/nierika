@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import { db } from './Credentials';
 import NewPublication from './NewPublication';
 import DrawTimeLine from './DrawTimeLine';
+import { currentUser } from './Login';
 
+console.log(currentUser);
 class TimeLine extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      posts: []
+      posts: [],
+      user: this.props
     };
   }
 
   componentDidMount() {
+    console.log(this.props.user);
     db.collection('timeLine')
       .orderBy('date', 'desc')
       .onSnapshot(querySnapshot => {
