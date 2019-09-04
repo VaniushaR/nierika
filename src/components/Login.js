@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import { db } from './Credentials';
 import Nav from './Nav';
-//import NewPublication from './NewPublication';
-//import TimeLine from './TimeLine';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import UsersList from './UsersList';
 import TimeLine from './TimeLine';
 import Profile from './Profile.jsx';
 
-let currenUser;
-let picCurrenUser;
+let currentUser;
+let picCurrentUser;
 
 class Login extends Component {
   constructor() {
@@ -65,15 +64,17 @@ class Login extends Component {
         console.log(`Ha ocurrido un error ${error.code}: ${error.message}`)
       );
   }
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   renderLogin() {
+    const { activeItem } = this.state;
     //if User have an a succesful login, get the date and the user basic data
     if (this.state.user) {
       const lastLogin = new Date();
-      currenUser = this.state.user.displayName;
-      console.log(currenUser);
-      picCurrenUser = this.state.user.photoURL;
-      console.log(picCurrenUser);
+      currentUser = this.state.user.displayName;
+      console.log(currentUser);
+      picCurrentUser = this.state.user.photoURL;
+      console.log(picCurrentUser);
       db.collection('users')
         .add({
           name: this.state.user.displayName,
@@ -89,7 +90,33 @@ class Login extends Component {
         });
       return (
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <Menu stackable>
+            <Menu.Item className="profile-content">
+              <img
+                className="profile"
+                src={this.state.user.photoURL}
+                alt={this.state.user.displayName}
+              />
+              <h4 className="profile-name">{this.state.user.displayName}</h4>
+              {/* <span className="sr-only">(current)</span> */}
+            </Menu.Item>
+
+            {/* // <Menu.Item */}
+            {/* //   name={this.state.user.displayName}
+            //   active={activeItem === 'profile'}
+            //   onClick={this.handleItemClick}
+            // >
+            //   {this.state.user.displayName}
+            // </Menu.Item> */}
+            <Menu.Item position="right"></Menu.Item>
+
+            <div className="exitBtn">
+              <button className="btn btn-danger" onClick={this.handleLogout}>
+                Salir
+              </button>
+            </div>
+          </Menu>
+          {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
@@ -124,11 +151,16 @@ class Login extends Component {
                 Salir
               </button>
             </div>
-          </nav>
+          </nav> */}
           <Router>
             <Nav />
             <Switch>
-              <Route path="/nierika" exact component={TimeLine} />
+              <Route
+                path="/nierika"
+                render={props => (
+                  <TimeLine {...props} user={this.state.user.displayName} />
+                )}
+              />
               <Route path="/usuarios" component={UsersList} />
               <Route path="/perfil" component={Profile} />
             </Switch>
@@ -136,7 +168,7 @@ class Login extends Component {
         </div>
       );
     } else {
-      //if user isn't log
+      //if user isn't log   exact component={TimeLine}
       return (
         <div className="main">
           <h2 className="welcome">
@@ -166,4 +198,4 @@ class Login extends Component {
 }
 
 export default Login;
-export { currenUser, picCurrenUser };
+export { currentUser, picCurrentUser };

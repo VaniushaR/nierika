@@ -53,7 +53,7 @@ body {
 }
 .profile {
   height: 60px;
-  width: 60px;
+  width: 60px !important;
   border-radius: 50%;
 }
 
@@ -168,4 +168,46 @@ body {
 }
 .accordion-com {
   padding: 0.5em;
+}
+.ui.menu {
+  margin: 0;
+}
+.ui.menu .item > img:not(.ui) {
+  width: none !important;
+}
+.exitBtn {
+  text-align: initial;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+}
+.profile-content {
+  text-align: center;
+  margin-left: 1.5em;
+}
+.profile-name {
+  margin-left: 0.8em;
+}
+.publicar-btn {
+  width: auto;
+}
+.navbar-brand {
+  color: darkgray !important;
+}
+.input-align {
+  margin-left: auto !important;
+}
+@media only screen and (max-width: 768px) {
+  .exitBtn {
+    width: -webkit-fill-available !important;
+  }
+  .publicar-btn {
+    width: -webkit-fill-available !important;
+  }
+  .wolf {
+    height: 90px;
+    margin-top: 8em;
+  }
+  .input-align {
+    margin-right: 4em !important;
+  }
 }
