@@ -162,29 +162,29 @@
     "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino"
   },
   {
-    "Language": "",
-    "Abbreviation": "azg",
+    "Language": "Chatino, Tataltepec",
+    "Abbreviation": "cta",
     "State": "Oaxaca",
     "Location": {
-      "Location_1": "Putla district",
-      "Location_2": "San Pedro Amuzgos",
-      "Location_3": "otros asentamientos"
+      "Location_1": "Juquila district",
+      "Location_2": "San Pedro Tututepec",
+      "Location_3": "Tataltepec de Valdez"
     },
     "Population": {
-      "Population_Number": 5200,
-      "Population_Date_Consult": 2011,
-      "Monolingual_Population": null,
+      "Population_Number": 540,
+      "Population_Date_Consult": 2015,
+      "Monolingual_Population": 1,
       "Monolingual_Population_Date_Consult": null
     },
     "Ethnic_Population": {
       "Ethnic_Population_Number": null,
       "Population_Date_Consult": null
     },
-    "Status": "6a (Vigorous)",
-    "Autonym": "Jnꞌoon",
-    "Alternate_Names": "Amuzgo Bajo del Este, Amuzgo de Oaxaca, Amuzgo de San Pedro Amuzgos, Jñon’ndaa, Oaxaca Amuzgo, Ñonda",
+    "Status": "6b (Threatened)",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino Occidental Bajo, Lowland Chatino",
     "Dialects": "None known",
-    "Lexical_Similarity": "76% comprehension of Guerrero Amuzgo amu",
-    "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
+    "Lexical_Similarity": "38% intelligibility of Yaitepec dialect of Western Highland Chatino ctp[ctp], 35% of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 33% of Nopala cya[cya], 27% of Zacatepec ctz[ctz].",
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino. "
   }
 ]
