@@ -1,0 +1,54 @@
+[
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  }
+]
