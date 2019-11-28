@@ -19,14 +19,17 @@ class Login extends Component {
       pictures: []
     };
     this.LoginFB = this.LoginFB.bind(this);
+    this.LoginTwitter = this.LoginTwitter.bind(this);
     this.LoginGoogle = this.LoginGoogle.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
+
   componentWillMount() {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ user }); //user : user
     });
-    firebase //para qué hago esto??
+
+    firebase
       .database()
       .ref('pictures')
       .on('child_added', snapshot => {
@@ -44,8 +47,19 @@ class Login extends Component {
       .then(result => console.log(`${result.user.email} ha iniciado sesión`))
       .catch(error => console.error(`Error ${error.code}: ${error.message}`));
   }
+
+  LoginTwitter() {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(result =>
+        console.log(`${result.user.email} ha iniciado sesión con twitter `)
+      );
+  }
+
   LoginFB() {
-    let provider = new firebase.auth.FacebookAuthProvider();
+    const provider = new firebase.auth.FacebookAuthProvider();
     firebase
       .auth()
       .signInWithPopup(provider)
@@ -69,6 +83,7 @@ class Login extends Component {
   renderLogin() {
     const { activeItem } = this.state;
     //if User have an a succesful login, get the date and the user basic data
+
     if (this.state.user) {
       const lastLogin = new Date();
       currentUser = this.state.user.displayName;
@@ -76,6 +91,7 @@ class Login extends Component {
       picCurrentUser = this.state.user.photoURL;
       console.log(picCurrentUser);
       db.collection('users')
+
         .add({
           name: this.state.user.displayName,
           email: this.state.user.email,
@@ -185,6 +201,14 @@ class Login extends Component {
             </button>
             <br />
             <br />
+            <button
+              type="button"
+              onClick={this.LoginTwitter}
+              className="btn twitter" 
+              />
+            <br />
+            <br />
+
             <button onClick={this.LoginFB} className="btn facebook" />
           </section>
         </div>
