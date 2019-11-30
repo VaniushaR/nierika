@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
-import { Dropdown, Segment, Grid, Label } from 'semantic-ui-react';
+import {
+  Dropdown,
+  Segment,
+  Grid,
+  Label,
+  Popup,
+  Button
+} from 'semantic-ui-react';
 import MexicanLanguages from '../data/mexican_languages';
 
 const options = MexicanLanguages.map(
-  ({ Abbreviation, Language, State, Location, Autonym }) => ({
+  ({ Abbreviation, Language, State, Location, Autonym, Alternate_Names }) => ({
     value: Language,
-    text: '[' + Abbreviation + ']  ' + Language + ' / ' + Autonym,
+    text:
+      '[' +
+      Abbreviation +
+      ']  ' +
+      Autonym +
+      ' / ' +
+      Language +
+      ' / ' +
+      Alternate_Names,
     flag: 'mx'
   })
 );

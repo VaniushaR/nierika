@@ -107,6 +107,32 @@
     "Classification": "Otomanguean, Eastern Otomanguean, Amuzgo-Mixtecan, Amuzgo"
   },
   {
+    "Language": "Árabe Levantino",
+    "Abbreviation": "apc",
+    "State": "Ciudad de México",
+    "Location": {
+      "Location_1": "Ciudad de México",
+      "Location_2": "Otro Estado y otra localidad"
+    },
+    "Population": {
+      "Population_Number": 540,
+      "Population_Date_Consult": 2015,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": 630000,
+      "Population_Date_Consult": 2001,
+      "Population_Date_Source": "Johnstone and Mandryk"
+    },
+    "Status": "7 (Shifting)",
+    "Autonym": "Libano-mexicano",
+    "Alternate_Names": "Libanés",
+    "Dialects": "",
+    "Lexical_Similarity": "",
+    "Classification": "Afro-Asiatic, Semitic, Central, South, Arabic"
+  },
+  {
     "Language": "Chatino, Eastern Highland  ",
     "Abbreviation": "cly",
     "State": "Oaxaca",
@@ -186,5 +212,296 @@
     "Dialects": "None known",
     "Lexical_Similarity": "38% intelligibility of Yaitepec dialect of Western Highland Chatino ctp[ctp], 35% of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 33% of Nopala cya[cya], 27% of Zacatepec ctz[ctz].",
     "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino. "
+  },
+  {
+    "Language": "Chatino del Altiplano Occidental",
+    "Abbreviation": "ctp",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Juquila",
+      "Location_2": "Panixtlahuaca",
+      "Location_3": "pueblos de Yaitepec ",
+      "Location_4": "San Juan Quiahije",
+      "Location_5": "San Juan Quiahije",
+      "Location_6": "San Juan Quiahije",
+      "Location_7": "San Juan Quiahije",
+      "Location_8": "San Juan Quiahije"
+    },
+    "Population": {
+      "Population_Number": 540,
+      "Population_Date_Consult": 2015,
+      "Monolingual_Population": 1,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "6b (Threatened)",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino Occidental Bajo, Lowland Chatino",
+    "Dialects": "None known",
+    "Lexical_Similarity": "38% intelligibility of Yaitepec dialect of Western Highland Chatino ctp[ctp], 35% of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 33% of Nopala cya[cya], 27% of Zacatepec ctz[ctz].",
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino. "
+  },
+  {
+    "Language": "Chantino, Zacatepec",
+    "Abbreviation": "ctz",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Juquila",
+      "Location_2": "San Marcos Zacatepec",
+      "Location_3": "Villas de Juquila"
+    },
+    "Population": {
+      "Population_Number": 450,
+      "Population_Date_Consult": 2000,
+      "Monolingual_Population": null,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "7 Shifting",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino de San Marcos Zacatepec, Chatino de Zacatepec",
+    "Dialects": "66% intelligibility of Nopala cya[cya], 61% of Panixtlahuaca dialect of Western Highland Chatino ctp[ctp], 57% of Yaitepec dialect of Western Highland Chatino, 6% of Tataltepec cta[cta]. Lengthened word forms are like Zenzontepec Chatino czn[czn].",
+    "Lexical_Similarity": "Reportedly similar to Eastern Highland Chatino cly[cly] in some respects, but geographically and socioeconomically separated.",
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino. "
+  },
+  {
+    "Language": "Chatino, Zenzontepec",
+    "Abbreviation": "czn",
+    "State": "Oaxaca",
+    "Location": {
+      "Location_1": "Juquila",
+      "Location_2": "Santa Cruz Zenzontepec",
+      "Location_3": "San Jacinto Tlacotepec",
+      "Location_4": "Santa María Tlapanalquiahuitl"
+    },
+    "Population": {
+      "Population_Number": 8490,
+      "Population_Date_Consult": 2000,
+      "Monolingual_Population": 2000,
+      "Monolingual_Population_Date_Consult": null
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "6a Vigorous",
+    "Autonym": "Cha’ jna’a",
+    "Alternate_Names": "Chatino Occidental Alto, Northern Chatino",
+    "Dialects": "Some dialect difference in Santa María Tlapanalquiahuitl area. One of the most isolated and conservative groups in Oaxaca.",
+    "Lexical_Similarity": null,
+    "Classification": "Otomanguean, Eastern Otomanguean, Popolocan-Zapotecan, Zapotecan, Chatino"
+  },
+  {
+    "Language": "Chiapaneco",
+    "Abbreviation": "cip",
+    "State": "Chiapas",
+    "Location": {
+      "Location_1": "El Bosque",
+      "Location_2": "Las Margaritas",
+      "Location_3": "Ocosingo",
+      "Location_4": "Alenque",
+      "Location_5": "Sabanilla"
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 2000,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": 32,
+      "Population_Date_Consult": null
+    },
+    "Status": "9 Dormant",
+    "Autonym": "",
+    "Alternate_Names": "Chiapaneco, Proto Chiapanec",
+    "Dialects": "Chidigio",
+    "Lexical_Similarity": "",
+    "Classification": "Otomanguean, Western Otomanguean, Tlapanec-Manguean, Manguean. "
+  },
+  {
+    "Language": "Chichimeco-Jonaz",
+    "Abbreviation": "pei",
+    "State": "Guanajuato",
+    "Location": {
+      "Location_1": "San Luís de la Paz",
+      "Location_2": "Villa Jonaz"
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "7 Shifting",
+    "Autonym": "Uzá",
+    "Alternate_Names": "Chichimec, Chichimeca, Chichimeco, Meco, Pame de Chichimeca-Jonaz, Uzá",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": "Otomanguean, Western Otomanguean, Oto-Pame-Chinantecan, Oto-Pamean. "
+  },
+  {
+    "Language": "Chicomuceltec",
+    "Abbreviation": "cob",
+    "State": "Chiapas",
+    "Location": {
+      "Location_1": "Amatenango de la Frontera con Guatemala"
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 1930,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": 1500,
+      "Population_Date_Consult": null
+    },
+    "Status": "9 (Dormant)",
+    "Autonym": "",
+    "Alternate_Names": "Cac’chiquel Mam, Cakchiquel Mam, Chicomukeltec, Chicomulcelteco",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": "Mayan, Huastecan"
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
+  },
+  {
+    "Language": "",
+    "Abbreviation": "",
+    "State": "",
+    "Location": {
+      "Location_1": "",
+      "Location_2": "",
+      "Location_3": ""
+    },
+    "Population": {
+      "Population_Number": 0,
+      "Population_Date_Consult": 0,
+      "Monolingual_Population": 0,
+      "Monolingual_Population_Date_Consult": 0
+    },
+    "Ethnic_Population": {
+      "Ethnic_Population_Number": null,
+      "Population_Date_Consult": null
+    },
+    "Status": "",
+    "Autonym": "",
+    "Alternate_Names": "",
+    "Dialects": "None known",
+    "Lexical_Similarity": "",
+    "Classification": ""
   }
 ]
