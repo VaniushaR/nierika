@@ -1,5 +1,17 @@
 //Aboutme
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Container, Segment } from 'semantic-ui-react';
 
-class AboutMe extends Component {}
+class About extends Component {
+  render() {
+    return (
+      <div>
+        <Container>
+          <Segment></Segment>
+        </Container>
+      </div>
+    );
+  }
+}
+
+export default About;
