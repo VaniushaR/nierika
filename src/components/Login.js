@@ -15,6 +15,7 @@ let picCurrentUser;
 
 class Login extends Component {
   state = { isSignedIn: false };
+  state = { exists: false };
   constructor() {
     super();
     this.state = {
@@ -51,22 +52,62 @@ class Login extends Component {
     if (this.state.user) {
       const lastLogin = new Date();
       currentUser = this.state.user.displayName;
-      console.log(currentUser);
+      // console.log(currentUser);
       picCurrentUser = this.state.user.photoURL;
-      console.log(picCurrentUser);
+      //    console.log(picCurrentUser);
+      //search on db if the user already exist
+
       db.collection('users')
-        .add({
-          name: this.state.user.displayName,
-          email: this.state.user.email,
-          picture: this.state.user.photoURL,
-          lastLogin: lastLogin
-        })
-        .then(function(docRef) {
-          console.log('Document written with ID: ', docRef.id);
+        .where('email', '==', this.state.user.email)
+        .get()
+        .then(function(querySnapshot) {
+          querySnapshot.forEach(function(doc) {
+            // If the user exists:
+            console.log(doc.id, ' => EXISTE EL USUARIO ', doc.data());
+            doc.id.add({ lastLogin: lastLogin });
+            this.setState.exist = true;
+          });
         })
         .catch(function(error) {
-          console.error('Error adding document: ', error);
+          console.log('Error getting documents: ', error);
         });
+
+      if ((this.state.exist = true)) {
+        console.log('not a new addition to the userslist');
+      } else {
+        console.log('NEW USER ARRIVES!');
+        db.collection('users')
+          .add({
+            name: this.state.user.displayName,
+            email: this.state.user.email,
+            picture: this.state.user.photoURL,
+            lastLogin: lastLogin
+          })
+          .then(function(docRef) {
+            console.log('Document written with ID: ', docRef.id);
+          })
+          .catch(function(error) {
+            console.error('Error adding document: ', error);
+          });
+      }
+
+      //***************Function to erase my own user registration
+      // db.collection('users')
+      //   .where('email', '==', 'vaniusha.wolf@hotmail.com')
+      //   .get()
+      //   .then(function(querySnapshot) {
+      //     querySnapshot.forEach(function(doc) {
+      //       doc.ref
+      //         .delete()
+      //         .then(() => {
+      //           console.log('Document successfully deleted!');
+      //         })
+      //         .catch(function(error) {
+      //           console.error('Error removing document: ', error);
+      //         });
+      //     });
+      //   });
+
       return (
         <div>
           <Menu stackable>

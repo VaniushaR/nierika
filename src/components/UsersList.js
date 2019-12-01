@@ -21,17 +21,17 @@ class UsersList extends Component {
         querySnapshot.forEach(doc => {
           const dataUsers = doc.data();
           usersListToday.push(dataUsers);
-          console.log('lista de usuarios: ', dataUsers.name);
+          //   console.log('lista de usuarios: ', dataUsers.name);
         });
         this.setState({ usersList: usersListToday });
-        console.log(this.state.usersList);
+        // console.log(this.state.usersList);
       });
   }
 
   render() {
     return (
       <div>
-        <h1>Users List</h1>
+        <h1>Usuarios Registrados</h1>
         <Segment className="usersList">
           <Grid relaxed columns={4}>
             {this.state.usersList.map((item, key) => (
@@ -39,23 +39,21 @@ class UsersList extends Component {
                 <Card>
                   <Image src={item.picture} wrapped ui={false} />
                   <Card.Content>
-                    <Card.Header>Mat</Card.Header>
+                    <Card.Header>{item.name}</Card.Header>
                     <Card.Meta>
-                      <span className="date">Joined in 2015</span>
+                      <span className="date">Lengua: ___</span>
                     </Card.Meta>
                     <Card.Description>
-                      Matthew is a musician living in Nashville.
+                      Descripción del usuario. Intereses. Mensaje
+                      personalizable.
                     </Card.Description>
                   </Card.Content>
                   <Card.Content extra>
                     <a>
-                      <Icon name="user" />
-                      22 Friends
+                      <Icon name="user" />2 Amigos
                     </a>
                   </Card.Content>
                 </Card>
-                <br />
-                <Image src="https://junkmailimages.blob.core.windows.net/large/0208943baf854e878083b11387037936.jpg" />
               </Grid.Column>
             ))}
           </Grid>
