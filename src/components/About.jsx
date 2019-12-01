@@ -72,6 +72,7 @@ class About extends Component {
               cause.
             </p>
             <Header>A Ray of Hope!</Header>
+
             <p>
               The youth, coming from the lineage of these indigenous linguistic
               cultures are realizing the importance and revaluing their language
@@ -90,7 +91,7 @@ class About extends Component {
             </p>
             <Image
               src={news}
-              size="large"
+              size="medium"
               centered
               href="https://oaxaca.eluniversal.com.mx/estatal/18-02-2019/hablantes-de-lenguas-indigenas-victimas-de-constante-discriminacion"
             ></Image>
