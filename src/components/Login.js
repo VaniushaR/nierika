@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import UsersList from './UsersList';
 import TimeLine from './TimeLine';
 import Profile from './Profile.jsx';
+import About from './About.jsx';
 
 let currentUser;
 let picCurrentUser;
@@ -22,7 +23,7 @@ class Login extends Component {
     };
   }
   uiConfig = {
-   // signInSuccessUrl: '/signedIn',
+    // signInSuccessUrl: '/signedIn',
     signInFlow: 'popup',
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -98,6 +99,7 @@ class Login extends Component {
               />
               <Route path="/usuarios" component={UsersList} />
               <Route path="/perfil" component={Profile} />
+              <Route path="/about" component={About} />
             </Switch>
           </Router>
         </div>
