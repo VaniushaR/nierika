@@ -27,6 +27,9 @@ class Nav extends Component {
         <Link to="/usuarios">
           <a className="navbar-brand">Usuarios</a>
         </Link>
+        <Link to="/about">
+          <a className="navbar-brand">About (EN)</a>
+        </Link>
         <form className="form-inline my-2 my-lg-0 input-align">
           <input
             className="form-control mr-sm-2"

@@ -24,6 +24,7 @@ class App extends Component {
     if (!this.state.splashEnded) {
       return <Splash />;
     }
+
     return (
       //else bind the Login view and components
       <div className="main">
